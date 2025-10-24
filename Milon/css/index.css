@@ -1,0 +1,180 @@
+/* =========================================================
+   ESTILO FUTURISTA CYBERPUNK-DEPORTIVO
+   Paleta: Negro, Amarillo Neón, Rojo, Blanco
+   ========================================================= */
+
+:root {
+  --color-negro: #0a0a0a;
+  --color-amarillo: #f3ad10;
+  --color-rojo: #f04624;
+  --color-blanco: #ffffff;
+  --color-gris: #1a1a1a;
+  --color-texto: #e0e0e0;
+
+  /* Efectos */
+  --sombra-neon: 0 0 15px var(--color-amarillo);
+  --transicion: all 0.3s ease;
+}
+
+/* ======= BODY ======= */
+body {
+  margin: 0;
+  font-family: "Orbitron", "Segoe UI", Roboto, sans-serif;
+  background-color: var(--color-negro);
+  color: var(--color-texto);
+  overflow-x: hidden;
+}
+
+/* ======= HEADER ======= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: linear-gradient(90deg, var(--color-negro) 0%, var(--color-rojo) 40%, var(--color-amarillo) 100%);
+  border-bottom: 3px solid var(--color-amarillo);
+  box-shadow: 0 0 25px rgba(243, 173, 16, 0.3);
+}
+
+header img {
+  height: 60px;
+  filter: drop-shadow(0 0 8px var(--color-amarillo));
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-blanco);
+  letter-spacing: 1px;
+  transition: var(--transicion);
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-amarillo);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-amarillo);
+  text-shadow: var(--sombra-neon);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ======= HERO ======= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url("../images/pista.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 3px solid var(--color-amarillo);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(10, 10, 10, 0.2));
+  backdrop-filter: brightness(0.9);
+}
+
+.hero h1 {
+  position: relative;
+  color: var(--color-amarillo);
+  font-size: 3em;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px var(--color-rojo), 0 0 25px var(--color-amarillo);
+  letter-spacing: 3px;
+  animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 10px var(--color-rojo), 0 0 20px var(--color-amarillo);
+  }
+  to {
+    text-shadow: 0 0 25px var(--color-rojo), 0 0 40px var(--color-amarillo);
+  }
+}
+
+/* ======= SECCIÓN DE CONTENIDO ======= */
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 50px;
+  background-color: var(--color-gris);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(145deg, #111111, #1c1c1c);
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(240, 70, 36, 0.3);
+  overflow: hidden;
+  transition: var(--transicion);
+  border: 1px solid var(--color-amarillo);
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 25px rgba(243, 173, 16, 0.6);
+}
+
+.card img {
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.card-text {
+  padding: 20px;
+  color: var(--color-texto);
+}
+
+.card-text h3 {
+  color: var(--color-amarillo);
+  margin-top: 0;
+  text-shadow: 0 0 5px var(--color-rojo);
+}
+
+.card-text p {
+  color: var(--color-blanco);
+  font-size: 0.95em;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(90deg, var(--color-negro), var(--color-gris));
+  color: var(--color-blanco);
+  border-top: 2px solid var(--color-amarillo);
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  box-shadow: 0 -5px 20px rgba(240, 70, 36, 0.3);
+}
+
+footer span {
+  color: var(--color-amarillo);
+}

@@ -1,0 +1,187 @@
+/* =========================================================
+   CONTACTO - ESTILO FUTURISTA CYBERPUNK DEPORTIVO
+   ========================================================= */
+
+:root {
+  --color-negro: #0a0a0a;
+  --color-amarillo: #f3ad10;
+  --color-rojo: #f04624;
+  --color-blanco: #ffffff;
+  --color-gris: #1a1a1a;
+  --color-texto: #e0e0e0;
+
+  --sombra-neon: 0 0 15px var(--color-amarillo);
+  --transicion: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: "Orbitron", "Segoe UI", Roboto, sans-serif;
+  background-color: var(--color-negro);
+  color: var(--color-texto);
+  overflow-x: hidden;
+}
+
+/* ======= HEADER ======= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: linear-gradient(90deg, var(--color-negro) 0%, var(--color-rojo) 40%, var(--color-amarillo) 100%);
+  border-bottom: 3px solid var(--color-amarillo);
+  box-shadow: 0 0 25px rgba(243, 173, 16, 0.3);
+}
+
+header img {
+  height: 60px;
+  filter: drop-shadow(0 0 8px var(--color-amarillo));
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-blanco);
+  letter-spacing: 1px;
+  transition: var(--transicion);
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-amarillo);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-amarillo);
+  text-shadow: var(--sombra-neon);
+}
+
+nav a:hover::after,
+nav a.activo::after {
+  width: 100%;
+}
+
+/* ======= CONTACTO ======= */
+.contacto-container {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 40px;
+  background: linear-gradient(145deg, #111, #1c1c1c);
+  border: 1px solid var(--color-amarillo);
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(243, 173, 16, 0.4);
+  text-align: center;
+}
+
+.contacto-container h1 {
+  color: var(--color-amarillo);
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px var(--color-rojo), 0 0 20px var(--color-amarillo);
+}
+
+.contacto-container p {
+  color: var(--color-blanco);
+  margin-bottom: 30px;
+  line-height: 1.5em;
+}
+
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo {
+  text-align: left;
+}
+
+.campo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-amarillo);
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-gris);
+  color: var(--color-blanco);
+  font-size: 1em;
+  outline: none;
+  transition: var(--transicion);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  box-shadow: 0 0 10px var(--color-amarillo);
+}
+
+/* ======= BOTÓN ======= */
+.btn-cyber {
+  background: var(--color-amarillo);
+  color: var(--color-negro);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px rgba(243, 173, 16, 0.8);
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.btn-cyber:hover {
+  background: var(--color-rojo);
+  color: var(--color-blanco);
+  box-shadow: 0 0 25px rgba(240, 70, 36, 0.8);
+}
+
+/* ======= ALERTA DE ÉXITO ======= */
+.alerta-exito {
+  background: rgba(243, 173, 16, 0.1);
+  border: 1px solid var(--color-amarillo);
+  color: var(--color-amarillo);
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px var(--color-amarillo);
+  box-shadow: 0 0 20px rgba(243, 173, 16, 0.3);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======= FOOTER ======= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(90deg, var(--color-negro), var(--color-gris));
+  color: var(--color-blanco);
+  border-top: 2px solid var(--color-amarillo);
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  box-shadow: 0 -5px 20px rgba(240, 70, 36, 0.3);
+}
+
+footer span {
+  color: var(--color-amarillo);
+}

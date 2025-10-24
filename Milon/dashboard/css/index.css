@@ -1,0 +1,198 @@
+/* =========================================================
+LOGIN MILON | ESTILO CYBERPUNK-DEPORTIVO
+Paleta: Negro, Amarillo Neón, Rojo, Blanco
+Tipografía: Orbitron (Google Fonts)
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* Fondo Cyberpunk Milon */
+body {
+font-family: 'Orbitron', 'Segoe UI', Roboto, sans-serif;
+background: radial-gradient(ellipse at center, #1a1a1a 0%, #000000 100%);
+color: #f3ad10;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+/* Contenedor del login */
+.login-container {
+background: rgba(20, 20, 20, 0.9);
+border: 2px solid #f3ad10;
+border-radius: 15px;
+padding: 40px 30px;
+width: 360px;
+box-shadow: 0 0 20px #f3ad10;
+backdrop-filter: blur(6px);
+transition: 0.3s ease-in-out;
+}
+
+.login-container:hover {
+box-shadow: 0 0 30px #f04624, 0 0 10px #f3ad10 inset;
+}
+
+/* Logo */
+.logo-container {
+display: flex;
+justify-content: center;
+margin-bottom: 25px;
+}
+
+.logo-container img {
+height: 70px;
+filter: drop-shadow(0 0 10px #f3ad10);
+}
+
+/* Título */
+.login-container h2 {
+text-align: center;
+margin-bottom: 25px;
+font-size: 28px;
+color: #f3ad10;
+text-shadow: 0 0 10px #f04624, 0 0 20px #f3ad10;
+letter-spacing: 2px;
+animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+from {
+text-shadow: 0 0 10px #f04624, 0 0 20px #f3ad10;
+}
+to {
+text-shadow: 0 0 25px #f04624, 0 0 40px #f3ad10;
+}
+}
+
+/* Formulario */
+form {
+display: flex;
+flex-direction: column;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+/* Etiquetas */
+label {
+display: block;
+margin-bottom: 8px;
+color: #ffffff;
+font-weight: bold;
+font-size: 0.9em;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+/* Inputs */
+input[type="email"],
+.password-container input {
+width: 100%;
+padding: 10px 12px;
+background: #0a0a0a;
+border: 1px solid #f3ad10;
+border-radius: 8px;
+color: #ffffff;
+font-size: 15px;
+outline: none;
+box-shadow: 0 0 5px #f3ad10 inset;
+transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="email"]:focus,
+.password-container input:focus {
+border-color: #f04624;
+box-shadow: 0 0 12px #f04624;
+}
+
+/* Contraseña + ojito */
+.password-container {
+position: relative;
+}
+
+.password-container input {
+padding-right: 40px; /* espacio para el ojito */
+}
+
+.toggle-password {
+position: absolute;
+right: 12px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 20px;
+color: #f3ad10;
+cursor: pointer;
+transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.toggle-password:hover {
+color: #f04624;
+text-shadow: 0 0 10px #f04624;
+}
+
+/* Botón */
+button {
+background: linear-gradient(90deg, #f04624, #f3ad10);
+color: #0a0a0a;
+border: none;
+padding: 12px;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 1px;
+animation: pulse 2s infinite;
+transition: background 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+background: linear-gradient(90deg, #f3ad10, #f04624);
+box-shadow: 0 0 20px #f3ad10;
+transform: scale(1.03);
+}
+
+@keyframes pulse {
+0% {
+box-shadow: 0 0 0px #f3ad10;
+}
+50% {
+box-shadow: 0 0 15px #f3ad10;
+}
+100% {
+box-shadow: 0 0 0px #f3ad10;
+}
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+.login-container {
+width: 90%;
+padding: 30px 20px;
+}
+
+.login-container h2 {
+font-size: 24px;
+}
+
+input[type="email"],
+.password-container input {
+font-size: 14px;
+}
+
+button {
+font-size: 15px;
+}
+
+.toggle-password {
+font-size: 18px;
+right: 10px;
+}
+}

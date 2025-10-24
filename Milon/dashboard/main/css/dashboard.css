@@ -1,0 +1,182 @@
+/* =========================================================
+DASHBOARD MILON | ESTILO CYBERPUNK-DEPORTIVO
+Paleta: Negro, Amarillo Neón, Rojo, Blanco
+Tipografía: Orbitron (Google Fonts)
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: 'Orbitron', 'Segoe UI', Roboto, sans-serif;
+background-color: #0a0a0a;
+color: #e0e0e0;
+}
+
+/* ===== HEADER ===== */
+header {
+background: linear-gradient(90deg, #000000 0%, #f04624 40%, #f3ad10 100%);
+color: var(--color-blanco, #fff);
+padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 1rem;
+border-bottom: 2px solid #f3ad10;
+box-shadow: 0 0 20px rgba(243, 173, 16, 0.3);
+}
+
+header a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: all 0.3s ease;
+}
+
+header a:hover {
+color: #f3ad10;
+text-shadow: 0 0 10px #f3ad10;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.contenedor {
+display: flex;
+height: calc(100vh - 64px);
+overflow: hidden;
+background-color: #111;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+width: 250px;
+background-color: #0f0f0f;
+padding: 1rem;
+border-right: 1px solid #f3ad10;
+box-shadow: 3px 0 10px rgba(240, 70, 36, 0.3);
+overflow-y: auto;
+font-size: 0.9rem;
+}
+
+/* ===== LOGO ===== */
+.logo-empresa {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.logo-empresa img {
+max-width: 160px;
+max-height: 70px;
+object-fit: contain;
+filter: drop-shadow(0 0 10px #f3ad10);
+}
+
+/* ===== ENLACES ===== */
+nav a {
+display: block;
+padding: 10px 12px;
+margin-bottom: 6px;
+color: #f3ad10;
+text-decoration: none;
+border-radius: 6px;
+font-weight: 600;
+text-transform: uppercase;
+transition: all 0.3s ease;
+background-color: rgba(255, 255, 255, 0.05);
+border-left: 3px solid transparent;
+}
+
+nav a:hover {
+background-color: #f04624;
+color: #fff;
+box-shadow: 0 0 10px #f04624;
+border-left: 3px solid #f3ad10;
+}
+
+/* ===== SUBMENÚS ===== */
+.submenu {
+margin-top: 10px;
+}
+
+.submenu > a {
+cursor: pointer;
+background-color: rgba(255, 255, 255, 0.07);
+border-left: 4px solid #f3ad10;
+}
+
+.submenu-items {
+display: none;
+flex-direction: column;
+margin-top: 5px;
+padding-left: 10px;
+border-left: 2px solid #f04624;
+}
+
+.submenu:hover .submenu-items {
+display: flex;
+}
+
+.submenu-items a {
+font-weight: normal;
+font-size: 0.85rem;
+margin-bottom: 4px;
+padding: 6px 8px;
+background-color: rgba(255, 255, 255, 0.05);
+}
+
+.submenu-items a:hover {
+background-color: #f04624;
+color: #fff;
+box-shadow: 0 0 8px #f3ad10;
+}
+
+/* ===== LINK-SOLO ===== */
+.link-solo a {
+display: block;
+cursor: pointer;
+background-color: rgba(255, 255, 255, 0.07);
+border-left: 4px solid #f3ad10;
+padding: 10px 12px;
+margin-bottom: 6px;
+color: #f3ad10;
+text-decoration: none;
+border-radius: 6px;
+font-weight: 600;
+text-transform: uppercase;
+transition: all 0.3s ease;
+}
+
+.link-solo a:hover {
+background-color: #f04624;
+color: #fff;
+box-shadow: 0 0 10px #f04624;
+}
+
+/* ===== SCROLLBAR ===== */
+nav::-webkit-scrollbar {
+width: 8px;
+}
+
+nav::-webkit-scrollbar-thumb {
+background-color: #f3ad10;
+border-radius: 10px;
+}
+
+nav::-webkit-scrollbar-thumb:hover {
+background-color: #f04624;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+iframe.contenido-principal {
+flex-grow: 1;
+border: none;
+width: 100%;
+height: 100%;
+background-color: #1a1a1a;
+padding: 0;
+box-shadow: inset 0 0 15px rgba(243, 173, 16, 0.2);
+}
